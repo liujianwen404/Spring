@@ -25,7 +25,7 @@ public class Test {
                 Class<?> bean = field.getType();
                 Constructor<?> constructor = bean.getConstructor();
                 Object instance = constructor.newInstance();
-                field.set(bean,clazz.getDeclaredField(field.getName()));
+                field.set(userController,instance);
             }
         }
         userController.test();
